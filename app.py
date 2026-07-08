@@ -7,5 +7,5 @@ def home():
     return{"message":"Titanic Prediction API is running."}
 @app.post("/predict")
 def predict_survival(passenger:Passenger):
-    result=predict(passenger.model.dump())
+    result=predict(passenger.model_dump())
     return result
